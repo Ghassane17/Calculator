@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="mycss.css">
+    <title>Calculator</title>
+    <script>
+        //i want to make a function called opperate according to the radio button checked 
+        function sum(){
+    var a =parseFloat(document.getElementById('number1').value) ; 
+    var b =parseFloat(document.getElementById('number2').value) ; 
+            var c = a+b ; 
+        document.getElementById('answer').innerHTML = "the answer is :" + c.toString() ;}
+
+        function subtract(){
+    var a =parseFloat(document.getElementById('number1').value) ; 
+    var b =parseFloat(document.getElementById('number2').value) ; 
+            var c = a-b ; 
+        document.getElementById('answer').innerHTML = "the answer is :" + c.toString() ;}  
+
+
+        function multiply(){
+    var a =parseFloat(document.getElementById('number1').value) ; 
+    var b =parseFloat(document.getElementById('number2').value) ; 
+            var c = a*b ; 
+        document.getElementById('answer').innerHTML = "the answer is :" + c.toString() ;}
+
+        function divide(){
+    var a =parseFloat(document.getElementById('number1').value) ; 
+    var b =parseFloat(document.getElementById('number2').value) ; 
+           if(b!=0) {var c = a/b ; 
+        document.getElementById('answer').innerHTML = "the answer is :     " + c.toString() ;}
+            else {document.getElementById('answer').innerHTML = "you'd better clean this up right now dummy :)"
+           }    
+    }
+
+    function opperate(){
+        let sumbutton = document.getElementById("sum") ; 
+        let subtractionbutton = document.getElementById("subtraction") ; 
+        let multiplicationbutton = document.getElementById("multiplication") ; 
+        let divisionbutton = document.getElementById("division") ; 
+
+if(sumbutton.checked) sum() ; 
+    else if(subtractionbutton.checked) subtract();
+        else if(multiplicationbutton.checked) multiply();
+            else if(divisionbutton.checked) divide() ;
+    }
+
+
+        function reset(){
+          location.reload();
+        }
+    </script>
+</head>
+
+<body> 
+   
+    <h1 style="color: blue;">Calculate Numbers Here</h1>
+    
+    <div id="input_output"> 
+        enter the first number <br>
+<input type="text" id="number1"> <br><br>
+enter the second number <br>
+<input type="text" id="number2"> <br><br>
+  
+ choose your arithmetic opperator
+<div class="arithmeticoperators">
+<input type="radio" id="sum" name="arithmetic">+<br> 
+<input type="radio" id="subtraction" name="arithmetic"> - <br>
+<input type="radio" id="multiplication" name="arithmetic" >X <br>
+<input type="radio" id="division" name="arithmetic" > / <br><br>
+</div>
+ <div id="resultreset">
+<button type="button" onclick="opperate()" ><h2 id="result">result</h2></button>
+<p id="answer"> </p>
+<button type="button" onclick="reset()"><h2 id="reset"> reset</h2></button> <br><br>
+
+</div><img src="Math_Lady_meme.jpg"  alt="i love maths" id="mathlady">
+</div>
+    
+</body>
+</html>

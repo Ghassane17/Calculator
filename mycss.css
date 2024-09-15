@@ -1,0 +1,43 @@
+#input_output{
+width: 300px;
+
+height:fit-content;
+ background-color: rgba(0, 0, 255, 0.657);
+ border-radius: 7px;
+text-align: center;
+margin: auto;
+
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#resultreset:hover { 
+transform: scale(1.05);
+
+
+}
+
+h1{
+text-align: center;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+text-decoration-color:rgba(0, 0, 255, 0.657); ;
+}
+
+
+
+.arithmeticoperators{
+    width: 50%;
+    margin: auto;
+
+}
+
+.resultreset{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   
+}
+
+
+#mathlady{
+width: 70%;
+border-radius: 10px;
+    
+}
